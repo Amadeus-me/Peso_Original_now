@@ -1,14 +1,16 @@
 import 'dart:developer';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:request_information/offices/cao.dart';
 import 'package:request_information/widgets/servicepanel.dart';
 
 
-
 class CMO extends StatefulWidget {
+
   @override
   _CMOState createState() => _CMOState();
 }
@@ -24,6 +26,10 @@ class _CMOState extends State<CMO> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+        routes: <String, WidgetBuilder>{
+        "offices/cao": (BuildContext context)=>CAO(),
+        },
         home: Scaffold(
           resizeToAvoidBottomPadding: false,
           backgroundColor: Colors.indigo[50],
@@ -99,15 +105,208 @@ class AboutTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.red,
-      child: Column(
-        children: <Widget>[
-          Card(child: Text("Hello"),),
-          Card(child: Text("Hello"),),
-          Card(child: Text("Hello"),),
+    return Container(
+      child: Padding(
+          padding: EdgeInsets.all(10.0),
+        child: ListView(
+          children: <Widget>[
+            Card(
+              child: InkWell(
+                onTap: (){Navigator.pushNamed(context, "offices/cao");},
+                child: Column(
+                  children: <Widget>[
+                   Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.info),
+                        Text("About Office", textDirection: TextDirection.ltr,),
+                      ],
+                    ),
+                  ),
+                  Divider(),
+                  Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.contacts),
+                        Text("Contact details: ", textDirection: TextDirection.ltr,),
+                      ],
+                    ),
+                  ),
+                  Divider(),
+                  Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.web),
+                        Text("Website", textDirection: TextDirection.ltr,),
+
+                      ],
+                    ),
+                  )
+                ],
+            ),
+              ),
+          ),
+            Card(
+            child: InkWell(
+              onTap: (){Navigator.pushNamed(context, "offices/cao");},
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.info),
+                        Text("About Office", textDirection: TextDirection.ltr,),
+                      ],
+                    ),
+                  ),
+                  Divider(),
+                  Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.contacts),
+                        Text("Contact details: ", textDirection: TextDirection.ltr,),
+                      ],
+                    ),
+                  ),
+                  Divider(),
+                  Padding(
+                    padding: const EdgeInsets.all(2.0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(Icons.web),
+                        Text("Website", textDirection: TextDirection.ltr,),
+
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+            Card(
+              child: InkWell(
+                onTap: (){Navigator.pushNamed(context, "offices/cao");},
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.info),
+                          Text("About Office", textDirection: TextDirection.ltr,),
+                        ],
+                      ),
+                    ),
+                    Divider(),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.contacts),
+                          Text("Contact details: ", textDirection: TextDirection.ltr,),
+                        ],
+                      ),
+                    ),
+                    Divider(),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.web),
+                          Text("Website", textDirection: TextDirection.ltr,),
+
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              child: InkWell(
+                onTap: (){Navigator.pushNamed(context, "offices/cao");},
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.info),
+                          Text("About Office", textDirection: TextDirection.ltr,),
+                        ],
+                      ),
+                    ),
+                    Divider(),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.contacts),
+                          Text("Contact details: ", textDirection: TextDirection.ltr,),
+                        ],
+                      ),
+                    ),
+                    Divider(),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.web),
+                          Text("Website", textDirection: TextDirection.ltr,),
+
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              child: InkWell(
+                onTap: (){Navigator.pushNamed(context, "offices/cao");},
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.info),
+                          Text("About Office", textDirection: TextDirection.ltr,),
+                        ],
+                      ),
+                    ),
+                    Divider(),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.contacts),
+                          Text("Contact details: ", textDirection: TextDirection.ltr,),
+                        ],
+                      ),
+                    ),
+                    Divider(),
+                    Padding(
+                      padding: const EdgeInsets.all(2.0),
+                      child: Row(
+                        children: <Widget>[
+                          Icon(Icons.web),
+                          Text("Website", textDirection: TextDirection.ltr,),
+
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
         ],
-      ),
+      ),),
     );
 
   }
